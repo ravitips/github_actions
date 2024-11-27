@@ -1,0 +1,22 @@
+name: Event Filters
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - 'dev*'
+      - 'prod*'
+  workflow_dispatch:
+  push:
+    branches:
+      - 'dev*'
+      - 'prod*'
+    paths-ignore:
+      - '.github/workflows/*'
+     
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GitHub context
+        run: echo "${{ toJSON(github) }}"
