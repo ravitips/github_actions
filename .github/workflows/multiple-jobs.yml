@@ -11,7 +11,7 @@ jobs:
             with:
                 python-version: '3.13'
           - name: Run Code
-            run: python main.py
+            run: python add.py
     python-sub-code-run:
         runs-on: ubuntu-latest
         steps:
@@ -22,4 +22,4 @@ jobs:
             with:
                 python-version: '3.13'
           - name: Run Code
-            run: python main.py
+            run: python subtract.py
