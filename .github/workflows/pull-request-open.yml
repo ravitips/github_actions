@@ -1,0 +1,12 @@
+name: Pull Request Open Trigger
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GitHub context
+        run: echo "${{ toJSON(github) }}"
