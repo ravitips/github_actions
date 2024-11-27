@@ -1,0 +1,25 @@
+name: Python Workflow
+on: push
+jobs:
+    python-add-code-run:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Get Code
+            uses: actions/checkout@v3
+          - name: Install Python
+            uses: actions/setup-python@v3
+            with:
+                python-version: '3.13'
+          - name: Run Code
+            run: python main.py
+    python-sub-code-run:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Get Code
+            uses: actions/checkout@v3
+          - name: Install Python
+            uses: actions/setup-python@v3
+            with:
+                python-version: '3.13'
+          - name: Run Code
+            run: python main.py
